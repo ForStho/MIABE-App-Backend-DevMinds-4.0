@@ -60,7 +60,7 @@ export class TransfersService {
         throw new NotFoundException('Bénéficiaire non trouvé');
       }
 
-      if (beneficiary.userId.toString() !== userId) {
+      if (String(beneficiary.userId) !== String(userId)) {
         throw new ForbiddenException('Ce bénéficiaire ne vous appartient pas');
       }
 
