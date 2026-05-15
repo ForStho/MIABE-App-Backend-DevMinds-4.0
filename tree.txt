@@ -1,0 +1,220 @@
+├── .env
+├── .env.example_
+├── .gitignore
+├── .prettierrc
+├── generate-tree.js
+├── key.js
+├── nest-cli.json
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── README.md
+├── src
+│   ├── app.module.ts
+│   ├── common
+│   │   ├── common.module.ts
+│   │   ├── Common.Readme.md
+│   │   ├── constants
+│   │   │   └── http-status.constants.ts
+│   │   ├── decorators
+│   │   │   ├── api-response.decorator.ts
+│   │   │   ├── current-user.decorator.ts
+│   │   │   ├── permissions.decorator.ts
+│   │   │   ├── public.decorator.ts
+│   │   │   ├── roles.decorator.ts
+│   │   │   └── throttle.decorator.ts
+│   │   ├── filters
+│   │   │   ├── all-exceptions.filter.ts
+│   │   │   └── http-exception.filter.ts
+│   │   ├── guards
+│   │   │   ├── index.ts
+│   │   │   ├── jwt-auth.guard.ts
+│   │   │   ├── permissions.guard.ts
+│   │   │   ├── rate-limit.guard.ts
+│   │   │   ├── roles.guard.ts
+│   │   │   └── swagger-auth.guard.ts
+│   │   ├── interceptors
+│   │   │   ├── avatar-url.interceptor.ts
+│   │   │   ├── cache.interceptor.ts
+│   │   │   ├── geolocation.interceptor.ts
+│   │   │   ├── logging.interceptor.ts
+│   │   │   ├── response.interceptor.ts
+│   │   │   └── timeout.interceptor.ts
+│   │   ├── pipes
+│   │   │   ├── parse-object-id.pipe.ts
+│   │   │   ├── sanitize.pipe.ts
+│   │   │   └── validation.pipe.ts
+│   │   ├── plugins
+│   │   │   ├── index.ts
+│   │   │   ├── slug.plugin.ts
+│   │   │   └── soft-delete.plugin.ts
+│   │   ├── services
+│   │   │   └── i18n.service.ts
+│   │   └── utils
+│   │       ├── error.utils.ts
+│   │       ├── filter.util.ts
+│   │       ├── hash.util.ts
+│   │       ├── pagination.util.ts
+│   │       ├── sanitize.util.ts
+│   │       └── token.util.ts
+│   ├── config
+│   │   ├── activity-logs.config.ts
+│   │   ├── app.config.ts
+│   │   ├── configuration.ts
+│   │   ├── database.config.ts
+│   │   ├── feature-flags.config.ts
+│   │   ├── idempotency.config.ts
+│   │   ├── jwt.config.ts
+│   │   ├── mail.config.ts
+│   │   ├── metrics.config.ts
+│   │   ├── moneroo.config.ts
+│   │   ├── queue.config.ts
+│   │   ├── redis.config.ts
+│   │   ├── resilience.config.ts
+│   │   ├── security.config.ts
+│   │   ├── storage.config.ts
+│   │   ├── swagger.config.ts
+│   │   ├── telemetry.config.ts
+│   │   ├── tenant.config.ts
+│   │   ├── validation.schema.ts
+│   │   └── _Config.Readme.md
+│   ├── core
+│   │   ├── core.module.ts
+│   │   ├── Core.Readme.md
+│   │   ├── database
+│   │   │   ├── database.constants.ts
+│   │   │   ├── database.module.ts
+│   │   │   ├── database.service.ts
+│   │   │   └── schemas
+│   │   ├── events
+│   │   │   ├── event-bus.service.ts
+│   │   │   ├── events.constants.ts
+│   │   │   └── events.module.ts
+│   │   ├── feature-flags
+│   │   │   ├── feature-flags.constants.ts
+│   │   │   ├── feature-flags.decorator.ts
+│   │   │   ├── feature-flags.guard.ts
+│   │   │   ├── feature-flags.module.ts
+│   │   │   └── feature-flags.service.ts
+│   │   ├── geolocation
+│   │   │   ├── geolocation.module.ts
+│   │   │   ├── geolocation.service.ts
+│   │   │   └── phone-geolocation.service.ts
+│   │   ├── health
+│   │   │   ├── health.controller.ts
+│   │   │   ├── health.module.ts
+│   │   │   └── health.service.ts
+│   │   ├── idempotency
+│   │   │   ├── idempotency.constants.ts
+│   │   │   ├── idempotency.middleware.ts
+│   │   │   ├── idempotency.module.ts
+│   │   │   └── idempotency.service.ts
+│   │   ├── logger
+│   │   │   ├── logger.constants.ts
+│   │   │   ├── logger.module.ts
+│   │   │   └── logger.service.ts
+│   │   ├── metrics
+│   │   │   ├── metrics.constants.ts
+│   │   │   ├── metrics.interceptor.ts
+│   │   │   ├── metrics.module.ts
+│   │   │   └── metrics.service.ts
+│   │   ├── queue
+│   │   │   ├── queue.constants.ts
+│   │   │   ├── queue.module.ts
+│   │   │   └── queue.service.ts
+│   │   ├── redis
+│   │   │   ├── blacklist.service.ts
+│   │   │   ├── cache.service.ts
+│   │   │   ├── rate-limit.store.ts
+│   │   │   ├── redis.constants.ts
+│   │   │   ├── redis.module.ts
+│   │   │   ├── redis.providers.ts
+│   │   │   └── redis.service.ts
+│   │   ├── resilience
+│   │   │   ├── circuit-breaker.decorator.ts
+│   │   │   ├── fallback.decorator.ts
+│   │   │   ├── resilience.constants.ts
+│   │   │   ├── resilience.module.ts
+│   │   │   ├── retry.decorator.ts
+│   │   │   └── timeout.decorator.ts
+│   │   ├── security
+│   │   │   ├── audit-log.service.ts
+│   │   │   ├── brute-force.guard.ts
+│   │   │   ├── brute-force.service.ts
+│   │   │   ├── ip-reputation.service.ts
+│   │   │   ├── schemas
+│   │   │   │   └── audit-log.schema.ts
+│   │   │   ├── security.constants.ts
+│   │   │   └── security.module.ts
+│   │   ├── telemetry
+│   │   │   ├── telemetry.constants.ts
+│   │   │   ├── telemetry.middleware.ts
+│   │   │   ├── telemetry.module.ts
+│   │   │   └── telemetry.service.ts
+│   │   └── tenant
+│   │       ├── tenant.constants.ts
+│   │       ├── tenant.decorator.ts
+│   │       ├── tenant.guard.ts
+│   │       ├── tenant.middleware.ts
+│   │       ├── tenant.module.ts
+│   │       └── tenant.service.ts
+│   ├── database
+│   │   ├── database.module.ts
+│   │   ├── database.service.ts
+│   │   ├── migrations
+│   │   │   └── README.md
+│   │   ├── mongo.connection.ts
+│   │   ├── scripts
+│   │   │   └── create-indexes.ts
+│   │   └── seed
+│   │       └── seed.ts
+│   ├── jobs
+│   │   ├── cron
+│   │   │   ├── example.cron.ts
+│   │   │   └── reminder.cron.ts
+│   │   ├── interfaces
+│   │   │   └── job-data.interface.ts
+│   │   ├── jobs.module.ts
+│   │   ├── processors
+│   │   │   └── push.processor.ts
+│   │   └── queues
+│   │       └── notifications.queue.ts
+│   ├── main.ts
+│   ├── modules
+│   └── shared
+│       ├── constants
+│       │   ├── countries.ts
+│       │   ├── events.enum.ts
+│       │   ├── languages.enum.ts
+│       │   ├── permissions.enum.ts
+│       │   ├── phone-dial-codes.ts
+│       │   └── roles.enum.ts
+│       ├── dto
+│       │   ├── error-response.dto.ts
+│       │   ├── paginated-response.dto.ts
+│       │   ├── pagination.dto.ts
+│       │   └── success-response.dto.ts
+│       ├── interfaces
+│       │   ├── paginated-response.interface.ts
+│       │   ├── role-permissions.interface.ts
+│       │   └── user.interface.ts
+│       └── shared.module.ts
+├── test
+│   ├── app.e2e-spec.ts
+│   └── jest-e2e.json
+├── tests
+│   ├── helpers
+│   │   └── factories.ts
+│   ├── integration
+│   │   └── app.e2e-spec.ts
+│   └── unit
+│       └── example.spec.ts
+├── tree.txt
+├── tsconfig.build.json
+├── tsconfig.json
+└── _env
+    ├── ENV_ARCHITECTURE.md
+    ├── ENV_BY_ENVIRONMENT.md
+    ├── ENV_CONFIGURATION_GUIDE.md
+    ├── ENV_INDEX.md
+    └── ENV_QUICK_REFERENCE.md
