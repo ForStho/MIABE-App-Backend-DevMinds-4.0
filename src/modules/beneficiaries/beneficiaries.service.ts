@@ -19,7 +19,7 @@ export class BeneficiariesService {
 
   constructor(
     @InjectModel(Beneficiary.name) private beneficiaryModel: Model<BeneficiaryDocument>,
-  ) {}
+  ) { }
 
   /**
    * Liste tous les bénéficiaires d'un utilisateur
@@ -69,7 +69,7 @@ export class BeneficiariesService {
       throw new NotFoundException('Bénéficiaire non trouvé');
     }
 
-    if (beneficiary.userId.toString() !== userId) {
+    if (String(beneficiary.userId) !== String(userId)) {
       throw new ForbiddenException('Vous n\'avez pas accès à ce bénéficiaire');
     }
 
