@@ -105,7 +105,7 @@ export class CoreModule {
      * on active le module par défaut.
      */
     const enableDatabase = options.enableDatabase ?? true;
-    const enableRedis = options.enableRedis ?? false; // Redis est désactivé par défaut car il n'est pas nécessaire pour toutes les applications
+    const enableRedis = options.enableRedis ?? true; // Redis est désactivé par défaut car il n'est pas nécessaire pour toutes les applications
     const enableLogger = options.enableLogger ?? true;
     const enableEvents = options.enableEvents ?? true;
     const enableHealth = options.enableHealth ?? true;
