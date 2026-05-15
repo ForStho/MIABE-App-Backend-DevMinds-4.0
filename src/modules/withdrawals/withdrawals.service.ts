@@ -146,7 +146,7 @@ export class WithdrawalsService {
       throw new NotFoundException('Retrait non trouvé');
     }
 
-    if (withdrawal.userId.toString() !== userId) {
+    if (String(withdrawal.userId) !== String(userId)) {
       throw new ForbiddenException('Ce retrait ne vous appartient pas');
     }
 
@@ -247,7 +247,7 @@ export class WithdrawalsService {
         throw new NotFoundException('Retrait non trouvé');
       });
 
-    if (withdrawal.userId.toString() !== userId) {
+    if (String(withdrawal.userId) !== String(userId)) {
       throw new ForbiddenException('Ce retrait ne vous appartient pas');
     }
 

@@ -266,7 +266,7 @@ export class TransfersService {
       throw new NotFoundException('Transfert non trouvé');
     }
 
-    if (transfer.senderId.toString() !== userId) {
+    if (String(transfer.senderId) !== String(userId)) {
       throw new ForbiddenException('Vous n\'avez pas accès à ce transfert');
     }
 
@@ -286,7 +286,7 @@ export class TransfersService {
       throw new NotFoundException('Transfert non trouvé');
     }
 
-    if (transfer.senderId.toString() !== userId) {
+    if (String(transfer.senderId) !== String(userId)) {
       throw new ForbiddenException('Vous n\'avez pas accès à ce transfert');
     }
 

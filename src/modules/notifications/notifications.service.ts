@@ -60,7 +60,7 @@ export class NotificationsService {
       throw new NotFoundException('Notification non trouvée');
     }
 
-    if (notification.userId.toString() !== userId) {
+    if (String(notification.userId) !== String(userId)) {
       throw new ForbiddenException('Cette notification ne vous appartient pas');
     }
 
